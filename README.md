@@ -15,6 +15,7 @@ This repository was made to keep all commands to install LAMP on Ubuntu 19.10
   https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04
 8. Configurate PHPMyAdmin
   https://help.ubuntu.ru/wiki/руководство_по_ubuntu_server/приложения_lamp/phpmyadmin
+
   sudo add-apt-repository ppa:phpmyadmin/ppa
   sudo apt-get update
   sudo apt-get install phpmyadmin
@@ -33,11 +34,14 @@ This repository was made to keep all commands to install LAMP on Ubuntu 19.10
         добавить
       Deny from all
       Allow from 127.0.0.1 109.172.13.224 192.168.1.
+      
 9. Check if apache, php, mysql and phpmysql work good:
   ip.address - will show apache page
   ip.address/info.php - will show php server information
   is.address/phpmyadmin - will show page to database connection
     after indicate login and password you must connect to your mysql
+    
 10. Solving problew with ftp
   https://www.thearyanews.com/google-cloud/solved-how-to-fix-sftp-permission-errors-on-google-cloud/
+
 11. Instruction how to use GitHub https://www.dmosk.ru/miniinstruktions.php?mini=github-linux-use
