@@ -16,24 +16,23 @@ This repository was made to keep all commands to install LAMP on Ubuntu 19.10
 8. Configurate PHPMyAdmin
   https://help.ubuntu.ru/wiki/руководство_по_ubuntu_server/приложения_lamp/phpmyadmin
 
-  sudo add-apt-repository ppa:phpmyadmin/ppa
-  sudo apt-get update
-  sudo apt-get install phpmyadmin
-  sudo ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf
-  sudo a2enconf phpmyadmin
-  sudo /etc/init.d/apache2 reload
+    sudo add-apt-repository ppa:phpmyadmin/ppa
+    sudo apt-get update
+    sudo apt-get install phpmyadmin
+    sudo ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf
+    sudo a2enconf phpmyadmin
+    sudo /etc/init.d/apache2 reload
   
-  если не запускается, то
-  sudo ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf.d/phpmyadmin.conf
-  sudo /etc/init.d/apache2 restart
-  
-  
-  Ограничить видимость для интернета
-    в файл /etc/apache2/conf-enabled/phpmyadmin.conf под строчкой
-      <Directory /usr/share/phpmyadmin> 
-        добавить
-      Deny from all
-      Allow from 127.0.0.1 109.172.13.224 192.168.1.
+    если не запускается, то
+    sudo ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf.d/phpmyadmin.conf
+    sudo /etc/init.d/apache2 restart
+    
+    Ограничить видимость для интернета
+      в файл /etc/apache2/conf-enabled/phpmyadmin.conf под строчкой
+        <Directory /usr/share/phpmyadmin> 
+          добавить
+        Deny from all
+        Allow from 127.0.0.1 109.172.13.224 192.168.1.
       
 9. Check if apache, php, mysql and phpmysql work good:
   ip.address - will show apache page
